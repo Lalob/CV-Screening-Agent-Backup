@@ -1,14 +1,7 @@
-# Virtual env & caches
 venv/
+.env
 __pycache__/
 *.pyc
+*.pkl
+faiss_index
 
-# Secrets
-.env
-
-# macOS junk
-.DS_Store
-
-# Logs & temp
-*.log
-tmp/
