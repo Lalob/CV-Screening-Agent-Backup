@@ -1,0 +1,23 @@
+flask
+faiss-cpu
+numpy
+PyPDF2
+python-dotenv
+sentence-transformers
+openai
+
+---------------------------------
+
+flask → runs the web interface.
+
+faiss-cpu → vector database for similarity search.
+
+numpy → needed by FAISS for handling embeddings.
+
+PyPDF2 → extracts text from CV PDFs.
+
+python-dotenv → loads API key from .env.
+
+sentence-transformers → generates embeddings for CV text (local).
+
+openai → connects to OpenRouter for the LLM-powered answers.

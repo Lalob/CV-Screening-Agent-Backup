@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>CV Screening Agent</title>
+    <!-- Favicon -->
+    <link rel="icon" href="{{ url_for('static', filename='star.ico') }}" type="image/ico">
+    <style>
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: #0b1e3a; /* dark blue/black background */
+        color: #f0f0f0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .container {
+        background: #0f2a55; /* slightly lighter dark blue */
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+        width: 600px;
+        max-width: 90%;
+      }
+
+      h1 {
+        text-align: center;
+        color: #00cfff; /* sky blue title */
+        margin-bottom: 30px;
+        font-size: 2em;
+      }
+
+      form {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+
+      input[type=text] {
+        flex: 1;
+        padding: 12px 15px;
+        border-radius: 8px;
+        border: none;
+        font-size: 1em;
+      }
+
+      input[type=submit] {
+        background: #00cfff; /* sky blue button */
+        border: none;
+        border-radius: 8px;
+        padding: 12px 20px;
+        font-size: 1em;
+        cursor: pointer;
+        color: #0b1e3a;
+        font-weight: bold;
+        transition: background 0.3s;
+      }
+
+      input[type=submit]:hover {
+        background: #008bbf; /* darker sky blue on hover */
+      }
+
+      .answer {
+        background: #001f3f; /* very dark blue */
+        padding: 20px;
+        border-radius: 10px;
+        border-left: 5px solid #00cfff;
+        line-height: 1.5;
+      }
+
+      .answer strong {
+        color: #00cfff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>CV Screening Agent</h1>
+      <form method="POST">
+        <input type="text" name="question" placeholder="Type your question here and see who's your next STAR" required>
+        <input type="submit" value="Ask">
+      </form>
+      {% if answer %}
+        <div class="answer">
+          <strong>Answer:</strong><br>
+          {{ answer }}
+        </div>
+      {% endif %}
+    </div>
+  </body>
+</html>
