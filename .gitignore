@@ -1,20 +1,14 @@
-# Ignore virtual environments
+# Virtual env & caches
 venv/
-.env
-
-# Ignore Python cache files
 __pycache__/
 *.pyc
-*.pyo
-*.pyd
 
-# Ignore FAISS index (optional if you want teammates to rebuild it themselves)
-faiss_index
-faiss_metadata.pkl
+# Secrets
+.env
 
-# Ignore OS-specific files
+# macOS junk
 .DS_Store
 
-# Ignore editor-specific files
-.vscode/
-.idea/
+# Logs & temp
+*.log
+tmp/
